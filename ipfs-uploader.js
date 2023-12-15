@@ -1,22 +1,30 @@
 import { create } from 'kubo-rpc-client'
 import fs from 'fs'
+import dotenv from 'dotenv';
+dotenv.config("./.env");
 
-
-const ipfs_url = 'http://127.0.0.1:5001'
-const ipfs = create(new URL(ipfs_url))
+const ipfs = create(new URL(process.env.IPFS_URL))
 
 export async function uploadFileToIPFS(filepath) {
-    const file = fs.readFileSync(filepath)
-    const result = await ipfs.add({ path: filepath, content: file })
-    // console.log(result)
-    return result
+    try {
+        const file = fs.readFileSync(filepath)
+        const result = await ipfs.add({ path: filepath, content: file })
+        // console.log(result)
+        return result
+    } catch (error) {
+        console.error('Failed to add file to IPFS:', error);
+    }
 }
 
 
 export async function uploadJsonToIPFS(json) {
-    const result = await ipfs.add(JSON.stringify(json))
-    // console.log(result)
-    return result
+    try {
+        const result = await ipfs.add(JSON.stringify(json))
+        // console.log(result)
+        return result
+    } catch (error) {
+        console.error('Failed to add JSON to IPFS:', error);
+    }
 }
 
 //测试能否成功上传到ipfs网络并得到cid
