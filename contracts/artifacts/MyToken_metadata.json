@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.22+commit.4fc1097e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -981,11 +981,11 @@
 			]
 		},
 		"contracts/erc721-nft.sol": {
-			"keccak256": "0x298fa8df7837ee30d99d45b81ca3d314bea7fe76d7c01335ac0ff1e96c8e283c",
+			"keccak256": "0x2bc0f69e0b86da85d525741a374b848c630786c984477a3b3b001e2f7c1105d6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4fab1607c865eda50844a02f89e6f619641414b9fc7a9965be28e68df204ea38",
-				"dweb:/ipfs/QmNdHPZ6Lm7dgj8KB4kjnZf2RKKtYX98vabtYEFeGoBBgB"
+				"bzz-raw://12fd73943f8e651d3b4c28b3f909774f3957629689935128528f2c28b7da8266",
+				"dweb:/ipfs/QmQWqCzx3z8fFRbFdC4pvAEXiAjtDU1FTUF5pvyDXvCFWg"
 			]
 		}
 	},
