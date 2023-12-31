@@ -65,7 +65,7 @@ app.post('/upload', (req, res) => {
         //铸造NFT给当前页面的账户，包含MTEA数据的CID  
         //并且如果界面没有连接账户 就默认铸造给设定好的默认账户ADDRESS
         const userAddress = address || process.env.ADDRESS;
-        await mint(userAddress, "http://localhost:8080/ipfs" + metadataCID)
+        await mint(userAddress, "http://localhost:8080/ipfs/" + metadataCID)
 
         //回显前端
         res.json({
